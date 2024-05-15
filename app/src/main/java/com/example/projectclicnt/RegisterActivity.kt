@@ -4,14 +4,21 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.example.projectclicnt.databinding.ActivityRegisterBinding
+import com.google.firebase.auth.FirebaseAuth
 
 class RegisterActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityRegisterBinding
+
+    private lateinit var auth: FirebaseAuth
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+
+        // Initialize Firebase Auth
+        auth = FirebaseAuth.getInstance()
 
         setupListeners()
 
@@ -31,6 +38,7 @@ class RegisterActivity : AppCompatActivity() {
                 Toast.makeText(this, "Please agree to the terms and conditions", Toast.LENGTH_SHORT).show()
             } else {
                 // Handle registration logic here
+                registerUser(email, password)
                 Toast.makeText(this, "Sign up clicked", Toast.LENGTH_SHORT).show()
             }
         }
@@ -39,6 +47,20 @@ class RegisterActivity : AppCompatActivity() {
             // Handle back button click here
             finish()
         }
+    }
+
+    private fun registerUser(email: String, password: String) {
+        auth.createUserWithEmailAndPassword(email, password)
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    // Sign in success, update UI with the signed-in user's information
+                    Toast.makeText(this, "Registration successful", Toast.LENGTH_SHORT).show()
+                    finish() // Close the activity or navigate to another screen
+                } else {
+                    // If sign in fails, display a message to the user.
+                    Toast.makeText(this, "Registration failed: ${task.exception?.message}", Toast.LENGTH_SHORT).show()
+                }
+            }
     }
 
 }
