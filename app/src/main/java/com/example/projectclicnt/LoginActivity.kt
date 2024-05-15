@@ -1,24 +1,22 @@
 package com.example.projectclicnt
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.widget.doOnTextChanged
 import com.example.projectclicnt.databinding.ActivityLoginBinding
 
 class LoginActivity : AppCompatActivity() {
-
 
     private lateinit var binding: ActivityLoginBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLoginBinding.inflate(layoutInflater)
-
         setContentView(binding.root)
 
         setupListeners()
-
     }
 
     private fun setupListeners() {
@@ -41,7 +39,14 @@ class LoginActivity : AppCompatActivity() {
 
         binding.signUpTextView.setOnClickListener {
             // Handle sign-up logic here
-            Toast.makeText(this, "Sign up clicked", Toast.LENGTH_SHORT).show()
+            try {
+                val intent = Intent(this@LoginActivity, RegisterActivity::class.java)
+                startActivity(intent)
+
+            } catch (e: Exception) {
+                e.printStackTrace()
+                Toast.makeText(this, "Error starting RegisterActivity", Toast.LENGTH_SHORT).show()
+            }
         }
 
         binding.editTextEmail.doOnTextChanged { text, _, _, _ ->
@@ -52,8 +57,4 @@ class LoginActivity : AppCompatActivity() {
             // Handle text change if needed
         }
     }
-
 }
-
-
-
