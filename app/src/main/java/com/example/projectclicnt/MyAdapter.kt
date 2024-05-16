@@ -1,19 +1,26 @@
-import android.content.Context
+
+
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.projectclicnt.R
 import com.example.projectclicnt.databinding.ProductItemBinding
+import com.example.projectclicnt.model.Location
+import com.example.projectclicnt.model.Price
+import com.example.projectclicnt.model.Product
+import com.example.projectclicnt.model.Responc
 
-class MyAdapter: RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
 
-//    var userList = mutableListOf<User>()
+class MyAdapter (private val products: List<Responc>): RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
+
     class MyViewHolder(view: View): RecyclerView.ViewHolder(view) {
 
         private lateinit var binding: ProductItemBinding
-        fun bind(){
-//            binding.imageViewProduct.
+        fun bind(price: Price,product: Product,location: Location,){
+            binding.tvProductTitel.text= product.name
+            binding.tvProductPrice.text= price.mrp.toString()
+            binding.tvlocation.text=location.type
 
         }
 
@@ -25,11 +32,13 @@ class MyAdapter: RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
     }
 
     override fun onBindViewHolder(holder: MyAdapter.MyViewHolder, position: Int) {
-        TODO("Not yet implemented")
+
+
+
     }
 
     override fun getItemCount(): Int {
-        TODO("Not yet implemented")
+        return products.size
     }
 
 }
