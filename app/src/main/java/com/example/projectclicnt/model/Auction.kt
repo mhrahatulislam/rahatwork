@@ -1,18 +1,23 @@
-package com.example.projectclicnt.model
+package com.example.example
 
-data class Auction(
-    val auctionId: String,
-    val auctionType: String,
-    val currentPrice: Int,
-    val customer: Customer,
-    val endDate: String,
-    val hasEnded: Boolean,
-    val isBuyNowEnable: Boolean,
-    val isExceedReservePrice: Boolean,
-    val isSealed: Boolean,
-    val lastBiddingId: String,
-    val minimumIncrementAmount: Int,
-    val nextBidPrice: Int,
-    val startDate: String,
-    val startingPrice: Int
+import com.google.gson.annotations.SerializedName
+
+
+data class Auction (
+
+  @SerializedName("auctionId"              ) var auctionId              : String?   = null,
+  @SerializedName("startingPrice"          ) var startingPrice          : Int?      = null,
+  @SerializedName("currentPrice"           ) var currentPrice           : Int?      = null,
+  @SerializedName("minimumIncrementAmount" ) var minimumIncrementAmount : Int?      = null,
+  @SerializedName("nextBidPrice"           ) var nextBidPrice           : Int?      = null,
+  @SerializedName("auctionType"            ) var auctionType            : String?   = null,
+  @SerializedName("isSealed"               ) var isSealed               : Boolean?  = null,
+  @SerializedName("isBuyNowEnable"         ) var isBuyNowEnable         : Boolean?  = null,
+  @SerializedName("hasEnded"               ) var hasEnded               : Boolean?  = null,
+  @SerializedName("customer"               ) var customer               : Customer? = Customer(),
+  @SerializedName("startDate"              ) var startDate              : String?   = null,
+  @SerializedName("endDate"                ) var endDate                : String?   = null,
+  @SerializedName("lastBiddingId"          ) var lastBiddingId          : String?   = null,
+  @SerializedName("isExceedReservePrice"   ) var isExceedReservePrice   : Boolean?  = null
+
 )

@@ -1,4 +1,4 @@
-package com.example.projectclicnt
+package com.example.projectclicnt.View
 
 import android.content.Intent
 import android.os.Bundle

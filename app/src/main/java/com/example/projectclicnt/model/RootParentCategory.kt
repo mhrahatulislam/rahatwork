@@ -3,7 +3,7 @@ package com.example.example
 import com.google.gson.annotations.SerializedName
 
 
-data class Category (
+data class RootParentCategory (
 
   @SerializedName("id"                   ) var id                   : String?           = null,
   @SerializedName("type"                 ) var type                 : String?           = null,
@@ -25,6 +25,6 @@ data class Category (
   @SerializedName("rootParentCategoryId" ) var rootParentCategoryId : String?           = null,
   @SerializedName("metaTitle"            ) var metaTitle            : String?           = null,
   @SerializedName("metaDescription"      ) var metaDescription      : String?           = null,
-  @SerializedName("childs"               ) var childs               : ArrayList<String> = arrayListOf()
+  @SerializedName("childs"               ) var childs               : ArrayList<Childs> = arrayListOf()
 
 )

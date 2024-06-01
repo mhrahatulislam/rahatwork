@@ -1,8 +1,13 @@
-package com.example.projectclicnt.model
+package com.example.example
 
-data class Location(
-    val coordinates: List<Double>,
-    val type: String,
-    val x: Double,
-    val y: Double
+import com.google.gson.annotations.SerializedName
+
+
+data class Location (
+
+  @SerializedName("x"           ) var x           : Double?           = null,
+  @SerializedName("y"           ) var y           : Double?           = null,
+  @SerializedName("coordinates" ) var coordinates : ArrayList<Double> = arrayListOf(),
+  @SerializedName("type"        ) var type        : String?           = null
+
 )

@@ -1,11 +1,16 @@
-package com.example.projectclicnt.model
+package com.example.example
 
-data class Price(
-    val currencyCode: String,
-    val discountedPrice: Int,
-    val giftCardValue: Any,
-    val mrp: Int,
-    val resellerTp: Any,
-    val sellerDiscountedPrice: Int,
-    val tp: Int
+import com.google.gson.annotations.SerializedName
+
+
+data class Price (
+
+  @SerializedName("mrp"                   ) var mrp                   : Int?    = null,
+  @SerializedName("tp"                    ) var tp                    : Int?    = null,
+  @SerializedName("resellerTp"            ) var resellerTp            : String? = null,
+  @SerializedName("sellerDiscountedPrice" ) var sellerDiscountedPrice : Int?    = null,
+  @SerializedName("currencyCode"          ) var currencyCode          : String? = null,
+  @SerializedName("discountedPrice"       ) var discountedPrice       : Int?    = null,
+  @SerializedName("giftCardValue"         ) var giftCardValue         : String? = null
+
 )
