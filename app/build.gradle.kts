@@ -58,15 +58,17 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.test.ext.junit)
     androidTestImplementation(libs.espresso.core)
-// Retrofit
-    implementation ("com.squareup.retrofit2:retrofit:2.9.0")
-    implementation ("com.squareup.retrofit2:converter-gson:2.9.0")
-    implementation ("androidx.lifecycle:lifecycle-extensions:2.2.0")
-    implementation ("com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.2")
+    // Retrofit
+    implementation (libs.retrofit)
+    implementation (libs.converter.gson)
+    implementation (libs.androidx.lifecycle.extensions)
+    implementation (libs.logging.interceptor)
 
-    implementation ("com.github.bumptech.glide:glide:4.14.2")
+    //glad
+    implementation (libs.glide)
+
     // Skip this if you don't want to use integration libraries or configure Glide.
-    annotationProcessor ("com.github.bumptech.glide:compiler:4.14.2")
+    annotationProcessor (libs.compiler)
 
 
 

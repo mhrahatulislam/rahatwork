@@ -1,4 +1,4 @@
-package com.example.apusing.ApiServ
+package com.example.projectclicnt.Network
 
 import com.example.example.ResponceData
 import retrofit2.Call
