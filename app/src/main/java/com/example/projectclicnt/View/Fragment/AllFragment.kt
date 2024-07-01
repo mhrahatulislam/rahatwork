@@ -1,6 +1,7 @@
 package com.example.projectclicnt.View.Fragment
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -8,8 +9,10 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.example.Products
 import com.example.example.ResponceData
 import com.example.projectclicnt.Network.RetrofitInstance
+import com.example.projectclicnt.View.Activity.ProductDetailsActivity
 import com.example.projectclicnt.View.Adapter.MyAdapter
 import com.example.projectclicnt.databinding.FragmentAllBinding
 import retrofit2.Call
@@ -17,7 +20,7 @@ import retrofit2.Callback
 import retrofit2.Response
 
 
-class AllFragment : Fragment() {
+class AllFragment : Fragment(),MyAdapter.ItemClickListener {
     private lateinit var binding: FragmentAllBinding
 
     //    private val binding get() = _binding!!
@@ -36,7 +39,7 @@ class AllFragment : Fragment() {
 
         binding.recyclerView.apply {
             layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
-            myAdapter = MyAdapter()
+            myAdapter = MyAdapter(this@AllFragment)
             adapter = myAdapter
         }
 
@@ -71,5 +74,17 @@ class AllFragment : Fragment() {
                 Toast.makeText(context, "Error: ${t.message}", Toast.LENGTH_SHORT).show()
             }
         })
+    }
+
+    override fun onItemClick(product:Products) {
+        Toast.makeText(context, "Clicked on: ${product.name}", Toast.LENGTH_SHORT).show()
+
+        val intent = Intent(context, ProductDetailsActivity::class.java)
+
+        intent.putExtra("productId", product.id)
+        intent.putExtra("productName", product.name)
+        intent.putExtra("productPrice",product.productImage)
+        context?.startActivity(intent)
+
     }
 }

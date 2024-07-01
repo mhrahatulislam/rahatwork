@@ -1,4 +1,23 @@
 <resources>
     <string name="app_name">ProjectClicnt</string>
     <string name="hello_blank_fragment">Hello Blank Fragment</string>
+    <string name="some_thing_elas">Some_thing_elas</string>
+    <string name="titelofproduct">titelofproduct</string>
+    <string name="productprice">productprice</string>
+    <string name="on_minimum_spend_of_bdt_499_from_same_store">On minimum spend of BDT 499 From same store</string>
+    <string name="acution_form_brand">Acution Form Brand</string>
+    <string name="place_bid">Place Bid</string>
+    <string name="productpricee">productprice</string>
+    <string name="save_60">Save 60%</string>
+    <string name="brand_informaiton">Brand Informaiton</string>
+    <string name="color_info">Color Info</string>
+    <string name="grey">Grey</string>
+    <string name="free_delivery">Free Delivery</string>
+    <string name="_16_oct_19_oct">16 oct - 19 Oct</string>
+    <string name="buy">Buy</string>
+    <string name="add_to_cart">Add to Cart</string>
+    <string name="some_thing_elass">Some_thing_elas</string>
+    <string name="titelofproducts">titelofproduct</string>
+    <string name="product_titel">Product Titel</string>
+    <string name="brand_informaitons">Brand Informaiton</string>
 </resources>

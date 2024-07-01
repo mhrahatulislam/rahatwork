@@ -8,7 +8,7 @@ import com.example.example.Products
 import com.example.projectclicnt.databinding.ProductItemBinding
 
 
-class MyAdapter  : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
+class MyAdapter ( private val listener : ItemClickListener) : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
     private var products: List<Products> = mutableListOf()
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
         return MyViewHolder(
@@ -16,7 +16,8 @@ class MyAdapter  : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
                 LayoutInflater.from(parent.context),
                 parent,
                 false
-            )
+            ),
+            listener
         )
     }
 
@@ -33,7 +34,7 @@ class MyAdapter  : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
         return products.size
     }
 
-    class MyViewHolder(val binding: ProductItemBinding) : RecyclerView.ViewHolder(binding.root) {
+    class MyViewHolder(val binding: ProductItemBinding,private val listener: ItemClickListener) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(product: Products) {
             binding.tvProductTitel.text = product.name
@@ -45,8 +46,16 @@ class MyAdapter  : RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
             Glide.with(binding.imageViewProduct.context).load(product.productImage)
                 .into(binding.imageViewProduct)
 
+            binding.root.setOnClickListener {
+                listener.onItemClick(product)
+            }
+
         }
 
+    }
+
+    interface ItemClickListener {
+        fun onItemClick(product: Products)
     }
 
 }

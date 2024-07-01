@@ -9,26 +9,24 @@
 
     <include
         android:id="@+id/include"
-        android:padding="8dp"
         layout="@layout/appbar"
+        android:padding="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-    </include>
-
+        app:layout_constraintTop_toTopOf="parent"/>
     <androidx.appcompat.widget.SearchView
         android:id="@+id/searchView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:searchIcon="@drawable/ic_search"
+        android:layout_margin="16dp"
         android:background="@drawable/box_curve_green"
         android:padding="12dp"
-        android:layout_margin="16dp"
         app:iconifiedByDefault="false"
-        app:queryHint="Search Your Id and Product"
         app:layout_constraintEnd_toEndOf="@+id/include"
         app:layout_constraintStart_toStartOf="@+id/include"
-        app:layout_constraintTop_toBottomOf="@+id/include" />
+        app:layout_constraintTop_toBottomOf="@+id/include"
+        app:queryHint="Search Your Id and Product"
+        app:searchIcon="@drawable/ic_search" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/clAcutionFromBrand"
@@ -43,9 +41,9 @@
             android:id="@+id/tvAcutionFromBrand"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:text="Acution Form Brand"
             android:layout_marginVertical="8dp"
+            android:layout_marginStart="10dp"
+            android:text="@string/acution_form_brand"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -57,13 +55,13 @@
             android:id="@+id/rvAcutionFromBand"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="12dp"
             android:orientation="horizontal"
-            tools:itemCount="1"
-            tools:listitem="@layout/branditem"
+            android:padding="12dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvAcutionFromBrand" />
+            app:layout_constraintTop_toBottomOf="@+id/tvAcutionFromBrand"
+            tools:itemCount="1"
+            tools:listitem="@layout/branditem" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -78,20 +76,21 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent">
+            app:layout_constraintTop_toTopOf="parent">
 
             <com.google.android.material.tabs.TabLayout
                 android:id="@+id/tblCatagory"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#FFFFFF"
-                app:tabMode="fixed"
-                app:tabGravity="fill"
-                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent">
+                app:layout_constraintTop_toTopOf="parent"
+                app:tabGravity="fill"
+                app:tabMode="fixed"
+                tools:ignore="SpeakableTextPresentCheck">
 
             </com.google.android.material.tabs.TabLayout>
 
@@ -99,13 +98,11 @@
                 android:id="@+id/viViewpagerCatagory"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                tools:ignore="SpeakableTextPresentCheck"
-                app:layout_constraintTop_toBottomOf="@+id/tblCatagory"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"/>
+                app:layout_constraintTop_toBottomOf="@+id/tblCatagory"
+                tools:ignore="SpeakableTextPresentCheck" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-
 </androidx.constraintlayout.widget.ConstraintLayout>
