@@ -20,4 +20,7 @@
     <string name="titelofproducts">titelofproduct</string>
     <string name="product_titel">Product Titel</string>
     <string name="brand_informaitons">Brand Informaiton</string>
+    <string name="color_info0">Color Info</string>
+    <string name="greyy">Grey</string>
+    <string name="_16_oct_19_octs">16 oct - 19 Oct</string>
 </resources>

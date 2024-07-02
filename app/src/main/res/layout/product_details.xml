@@ -416,7 +416,7 @@
 
 
                 <TextView
-                    android:id="@+id/string_currentbid"
+                    android:id="@+id/tvString_currentbid"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="12dp"
@@ -433,7 +433,7 @@
                 </TextView>
 
                 <TextView
-                    android:id="@+id/txtview_price"
+                    android:id="@+id/tv_price"
                     android:layout_width="160dp"
                     android:layout_height="50dp"
                     android:layout_marginStart="12dp"
@@ -449,7 +449,7 @@
                     app:layout_constraintBottom_toTopOf="@+id/textView9"
                     app:layout_constraintEnd_toStartOf="@+id/priceviw"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/string_currentbid">
+                    app:layout_constraintTop_toBottomOf="@+id/tvString_currentbid">
 
                 </TextView>
 
@@ -462,11 +462,11 @@
                     android:text="To win the bid please put in a bid price that is higher than current bid."
                     android:textColor="#838383"
                     android:textSize="12dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/txtview_price"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_price"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toEndOf="@+id/txtview_price"
-                    app:layout_constraintTop_toTopOf="@+id/txtview_price"
+                    app:layout_constraintStart_toEndOf="@+id/tv_price"
+                    app:layout_constraintTop_toTopOf="@+id/tv_price"
                     app:layout_constraintVertical_bias="0.0"
                     tools:ignore="TextSizeCheck">
 
@@ -479,7 +479,7 @@
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="12dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/txtview_price" />
+                    app:layout_constraintTop_toBottomOf="@+id/tv_price" />
 
                 <TextView
                     android:id="@+id/textView10"

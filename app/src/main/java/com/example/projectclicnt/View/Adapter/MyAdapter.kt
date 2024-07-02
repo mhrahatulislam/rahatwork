@@ -39,9 +39,9 @@ class MyAdapter ( private val listener : ItemClickListener) : RecyclerView.Adapt
         fun bind(product: Products) {
             binding.tvProductTitel.text = product.name
             binding.tvProductPrice.text = product.variations[0].price?.mrp.toString()
-            binding.tvCurrecntBid.text = product.auction?.currentPrice.toString()
+//            binding.tvCurrecntBid.text = product.auction?.currentPrice.toString()
             binding.tvlocation.text = product.shop?.location?.type
-            binding.tvEndsofBidTime.text = product.auction?.endDate.toString()
+//            binding.tvEndsofBidTime.text = product.auction?.endDate.toString()
 
             Glide.with(binding.imageViewProduct.context).load(product.productImage)
                 .into(binding.imageViewProduct)

@@ -50,7 +50,6 @@ class MainActivity : AppCompatActivity() {
     }
     private fun testRetrofit() {
         val call = RetrofitInstance.api.getProductData(
-            productType = "exampleType",
             isDeleted = false,
             minimumStock = 10,
             sortBy = "name",

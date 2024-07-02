@@ -48,12 +48,11 @@ class AllFragment : Fragment(),MyAdapter.ItemClickListener {
 
     private fun fetchProducts() {
         val call = RetrofitInstance.api.getProductData(
-            productType = "AUCTION",
             isDeleted = false,
-            minimumStock = 10000000,
-            sortBy = "displayOrder",
-            sortOrder = "ASC",
-            page = 0,
+            minimumStock = 10,
+            sortBy = "name",
+            sortOrder = "asc",
+            page = 1,
             limit = 20
         )
 
@@ -76,14 +75,15 @@ class AllFragment : Fragment(),MyAdapter.ItemClickListener {
         })
     }
 
-    override fun onItemClick(product:Products) {
+    override fun onItemClick(product: Products) {
         Toast.makeText(context, "Clicked on: ${product.name}", Toast.LENGTH_SHORT).show()
 
         val intent = Intent(context, ProductDetailsActivity::class.java)
 
-        intent.putExtra("productId", product.id)
+        intent.putExtra("productImage",product.productImage)
         intent.putExtra("productName", product.name)
-        intent.putExtra("productPrice",product.productImage)
+        intent.putExtra("productPrice",product.variations[0].price?.mrp.toString())
+        intent.putExtra("Rating", product.rating)
         context?.startActivity(intent)
 
     }

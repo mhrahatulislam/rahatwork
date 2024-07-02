@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName
 data class Price (
 
   @SerializedName("mrp"                   ) var mrp                   : Int?    = null,
-  @SerializedName("tp"                    ) var tp                    : Int?    = null,
+  @SerializedName("tp"                    ) var tp                    : Double?    = null,
   @SerializedName("resellerTp"            ) var resellerTp            : String? = null,
   @SerializedName("sellerDiscountedPrice" ) var sellerDiscountedPrice : Int?    = null,
   @SerializedName("currencyCode"          ) var currencyCode          : String? = null,

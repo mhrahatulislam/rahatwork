@@ -1,13 +1,10 @@
-package com.example.example
+package com.example.apusing.Model
 
 import com.google.gson.annotations.SerializedName
 
-
-data class GroupBuy (
-
-  @SerializedName("lastPaymentTimeInMinute"   ) var lastPaymentTimeInMinute   : Int?     = null,
-  @SerializedName("totalParticipator"         ) var totalParticipator         : String?  = null,
-  @SerializedName("noOfParticipatorEachGroup" ) var noOfParticipatorEachGroup : Int?     = null,
-  @SerializedName("isPayFirst"                ) var isPayFirst                : Boolean? = null
-
+data class GroupBuy(
+    @SerializedName("lastPaymentTimeInMinute") var lastPaymentTimeInMinute: Long?= null,
+    @SerializedName("totalParticipator") var totalParticipator: Any? = null,
+    @SerializedName("noOfParticipatorEachGroup") var noOfParticipatorEachGroup: Long?= null,
+    @SerializedName("isPayFirst") var isPayFirst: Boolean? = null
 )

@@ -8,7 +8,6 @@ import retrofit2.http.Query
 interface ApiService {
     @GET("product/v2")
     fun getProductData(
-        @Query("productType") productType: String,
         @Query("isDeleted") isDeleted: Boolean,
         @Query("minimumStock") minimumStock: Long,
         @Query("sortBy") sortBy: String,

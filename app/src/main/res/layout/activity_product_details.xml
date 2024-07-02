@@ -93,7 +93,8 @@
                             android:text="3000"
                             android:textColor="#E0171D"
                             android:textSize="16sp"
-                            android:textStyle="bold"/>
+                            android:textStyle="bold"
+                            />
 
                         <TextView
                             android:id="@+id/tvProductPriceoff"
@@ -104,7 +105,8 @@
                             android:text="3500"
                             android:textColor="#A6A4A4"
                             android:textSize="16sp"
-                            android:textStyle="bold"/>
+                            android:textStyle="bold"
+                            tools:ignore="HardcodedText" />
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
@@ -123,7 +125,8 @@
                                 android:textSize="10sp"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toEndOf="parent"
-                                app:layout_constraintTop_toTopOf="parent" />
+                                app:layout_constraintTop_toTopOf="parent"
+                                tools:ignore="HardcodedText,SmallSp" />
 
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -149,6 +152,7 @@
                                 app:layout_constraintTop_toTopOf="parent"/>
 
                             <ImageView
+                                android:id="@+id/ivArrowDetils"
                                 android:layout_width="19dp"
                                 android:layout_height="19dp"
                                 android:src="@drawable/arrowforword"
@@ -157,7 +161,7 @@
                                 app:layout_constraintHorizontal_bias="0.515"
                                 app:layout_constraintStart_toEndOf="@+id/tvBrandInformation"
                                 app:layout_constraintTop_toTopOf="parent"
-                                app:layout_constraintVertical_bias="0.478" />
+                                app:layout_constraintVertical_bias="0.478"/>
 
                         </androidx.constraintlayout.widget.ConstraintLayout>
                     </LinearLayout>
@@ -169,11 +173,12 @@
                         android:gravity="center">
 
                         <TextView
+                            android:id="@+id/tvRatingNum"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="5.0"
                             android:textColor="@color/black"
-                            android:textStyle="bold"></TextView>
+                            android:textStyle="bold"/>
 
                         <RatingBar
                             android:id="@+id/smallRating"
@@ -191,7 +196,7 @@
                             android:layout_width="12dp"
                             android:layout_height="19dp"
                             android:layout_marginStart="8dp"
-                            android:src="@drawable/arrowforword"></ImageView>
+                            android:src="@drawable/arrowforword"/>
 
                         <androidx.constraintlayout.widget.ConstraintLayout
                             android:layout_width="match_parent"
@@ -208,16 +213,14 @@
                                 app:layout_constraintHorizontal_bias="0.734"
                                 app:layout_constraintStart_toStartOf="parent"
                                 app:layout_constraintTop_toTopOf="parent"
-                                app:layout_constraintVertical_bias="1.0"></ImageView>
+                                app:layout_constraintVertical_bias="1.0"/>
 
                             <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:src="@drawable/share_icon"
                                 app:layout_constraintStart_toEndOf="@+id/imageView2"
-                                app:layout_constraintTop_toTopOf="parent">
-
-                            </ImageView>
+                                app:layout_constraintTop_toTopOf="parent"/>
 
                         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -234,7 +237,7 @@
                         <TextView
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Color Info"
+                            android:text="@string/color_info0"
                             android:textSize="14sp"
                             android:textStyle="bold">
 
@@ -253,11 +256,9 @@
                                 android:layout_marginEnd="8dp"
                                 android:background="@drawable/color_box"
                                 android:gravity="center"
-                                android:text="Grey"
+                                android:text="@string/grey"
                                 android:textColor="@color/black"
-                                android:textStyle="bold">
-
-                            </TextView>
+                                android:textStyle="bold"/>
 
                             <TextView
                                 android:layout_width="55dp"
@@ -265,9 +266,9 @@
                                 android:layout_marginEnd="8dp"
                                 android:background="@drawable/color_box"
                                 android:gravity="center"
-                                android:text="Grey"
+                                android:text="@string/grey"
                                 android:textColor="@color/black"
-                                android:textStyle="bold"></TextView>
+                                android:textStyle="bold"/>
 
                             <TextView
                                 android:layout_width="55dp"
@@ -275,9 +276,9 @@
                                 android:layout_marginEnd="8dp"
                                 android:background="@drawable/color_box"
                                 android:gravity="center"
-                                android:text="Grey"
+                                android:text="@string/grey"
                                 android:textColor="@color/black"
-                                android:textStyle="bold"></TextView>
+                                android:textStyle="bold"/>
 
                             <TextView
                                 android:layout_width="55dp"
@@ -285,9 +286,9 @@
                                 android:layout_marginEnd="8dp"
                                 android:background="@drawable/color_box"
                                 android:gravity="center"
-                                android:text="Grey"
+                                android:text="@string/grey"
                                 android:textColor="@color/black"
-                                android:textStyle="bold"></TextView>
+                                android:textStyle="bold"/>
                         </LinearLayout>
                     </LinearLayout>
 
@@ -307,7 +308,7 @@
                             <ImageView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:src="@drawable/delivery_icon"></ImageView>
+                                android:src="@drawable/delivery_icon"/>
 
                             <TextView
                                 android:id="@+id/delivery_type"
@@ -315,9 +316,9 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="6dp"
                                 android:fontFamily="@font/uni_neue"
-                                android:text="Free Delivery"
+                                android:text="@string/free_delivery"
                                 android:textColor="#047E94"
-                                android:textStyle="bold"></TextView>
+                                android:textStyle="bold"/>
 
                             <TextView
                                 android:id="@+id/time"
@@ -325,8 +326,8 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="6dp"
                                 android:fontFamily="@font/uni_neue"
-                                android:text="16 oct - 19 Oct"
-                                android:textColor="#047E94"></TextView>
+                                android:text="@string/_16_oct_19_octs"
+                                android:textColor="#047E94"/>
                         </LinearLayout>
 
                         <LinearLayout
@@ -337,14 +338,14 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@font/uni_neue"
-                                android:text="On minimum spend of BDT 499 From same store"
-                                android:textColor="#047E94"></TextView>
+                                android:text="@string/on_minimum_spend_of_bdt_499_from_same_store"
+                                android:textColor="#047E94"/>
 
                             <ImageView
                                 android:layout_width="14dp"
                                 android:layout_height="wrap_content"
                                 android:layout_marginStart="4dp"
-                                android:src="@drawable/arrowforword"></ImageView>
+                                android:src="@drawable/arrowforword"/>
                         </LinearLayout>
 
                     </LinearLayout>
@@ -363,9 +364,10 @@
                             android:layout_height="wrap_content"
                             android:backgroundTint="#DA6900"
                             android:fontFamily="@font/uni_neue"
-                            android:text="Buy"
+                            android:text="@string/buy"
                             android:textSize="16dp"
-                            android:textStyle="bold"></Button>
+                            android:textStyle="bold"
+                            tools:ignore="SpUsage" />
 
                         <Button
                             android:id="@+id/btn_addtocard"
@@ -373,17 +375,13 @@
                             android:layout_height="wrap_content"
                             android:backgroundTint="#E0171D"
                             android:fontFamily="@font/uni_neue"
-                            android:text="Add to Cart"
-                            android:textSize="16dp"
-                            android:textStyle="bold"></Button>
-
+                            android:text="@string/add_to_cart"
+                            android:textSize= "16sp"
+                            android:textStyle="bold"/>
                     </LinearLayout>
-
-
                 </LinearLayout>
-
-
             </androidx.constraintlayout.widget.ConstraintLayout>
+
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/clsels"
@@ -408,11 +406,11 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="HardcodedText" />
 
                 <TextView
-                    android:id="@+id/string_currentbid"
+                    android:id="@+id/tvString_currentbid"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="12dp"
@@ -420,16 +418,17 @@
                     android:layout_marginEnd="152dp"
                     android:text="Starting/Current Bid ৳3500"
                     android:textColor="#FF0707"
-                    android:textSize="16dp"
+                    android:textSize="16sp"
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/offerdate">
+                    app:layout_constraintTop_toBottomOf="@+id/offerdate"
+                    tools:ignore="HardcodedText,RtlHardcoded">
 
                 </TextView>
 
                 <TextView
-                    android:id="@+id/txtview_price"
+                    android:id="@+id/tv_price"
                     android:layout_width="160dp"
                     android:layout_height="50dp"
                     android:layout_marginStart="12dp"
@@ -445,7 +444,8 @@
                     app:layout_constraintBottom_toTopOf="@+id/textView9"
                     app:layout_constraintEnd_toStartOf="@+id/priceviw"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/string_currentbid">
+                    app:layout_constraintTop_toBottomOf="@+id/tvString_currentbid"
+                    tools:ignore="HardcodedText">
 
                 </TextView>
 
@@ -458,11 +458,11 @@
                     android:text="To win the bid please put in a bid price that is higher than current bid."
                     android:textColor="#838383"
                     android:textSize="12dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/txtview_price"
+                    app:layout_constraintBottom_toBottomOf="@+id/tv_price"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toEndOf="@+id/txtview_price"
-                    app:layout_constraintTop_toTopOf="@+id/txtview_price"
+                    app:layout_constraintStart_toEndOf="@+id/tv_price"
+                    app:layout_constraintTop_toTopOf="@+id/tv_price"
                     app:layout_constraintVertical_bias="0.0"
                     tools:ignore="TextSizeCheck">
 
@@ -475,7 +475,7 @@
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="12dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/txtview_price" />
+                    app:layout_constraintTop_toBottomOf="@+id/tv_price" />
 
                 <TextView
                     android:id="@+id/textView10"
@@ -522,6 +522,7 @@
                     app:layout_constraintTop_toTopOf="@+id/textView13" />
 
                 <Button
+                    android:id="@+id/btnPlaceBid"
                     android:layout_width="325dp"
                     android:layout_height="48dp"
                     android:layout_marginStart="12dp"
