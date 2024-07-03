@@ -9,8 +9,8 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.example.Products
-import com.example.example.ResponceData
+import com.example.projectclicnt.Model.GetData.Products
+import com.example.projectclicnt.Model.GetData.ResponceData
 import com.example.projectclicnt.Network.RetrofitInstance
 import com.example.projectclicnt.View.Activity.ProductDetailsActivity
 import com.example.projectclicnt.View.Adapter.MyAdapter
@@ -48,11 +48,12 @@ class AllFragment : Fragment(),MyAdapter.ItemClickListener {
 
     private fun fetchProducts() {
         val call = RetrofitInstance.api.getProductData(
+            productType= "AUCTION",
             isDeleted = false,
-            minimumStock = 10,
-            sortBy = "name",
+            minimumStock = 10000000,
+            sortBy = "displayOrder",
             sortOrder = "asc",
-            page = 1,
+            page = 0,
             limit = 20
         )
 
@@ -84,6 +85,14 @@ class AllFragment : Fragment(),MyAdapter.ItemClickListener {
         intent.putExtra("productName", product.name)
         intent.putExtra("productPrice",product.variations[0].price?.mrp.toString())
         intent.putExtra("Rating", product.rating)
+        intent.putExtra("OfferPrice",product.variations[0].price?.discountedPrice.toString())
+        intent.putExtra("BidDate", product.auction?.endDate.toString())
+        intent.putExtra("startingPrice",product.auction?.startingPrice.toString())
+        intent.putExtra("currentPrice",product.auction?.currentPrice.toString())
+        intent.putExtra("minimumIncrementAmount",product.auction?.minimumIncrementAmount.toString())
+        intent.putExtra("productId",product.campaignId)
+
+
         context?.startActivity(intent)
 
     }

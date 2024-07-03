@@ -3,7 +3,7 @@ package com.example.projectclicnt.View.Activity
 import android.os.Bundle
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import com.example.example.ResponceData
+import com.example.projectclicnt.Model.GetData.ResponceData
 import com.example.projectclicnt.Network.RetrofitInstance
 import com.example.projectclicnt.View.Adapter.TabAdapter
 import com.example.projectclicnt.databinding.ActivityMainBinding
@@ -50,11 +50,12 @@ class MainActivity : AppCompatActivity() {
     }
     private fun testRetrofit() {
         val call = RetrofitInstance.api.getProductData(
+            productType= "AUCTION",
             isDeleted = false,
-            minimumStock = 10,
-            sortBy = "name",
+            minimumStock = 10000000,
+            sortBy = "displayOrder",
             sortOrder = "asc",
-            page = 1,
+            page = 0,
             limit = 20
         )
 

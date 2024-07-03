@@ -402,7 +402,7 @@
                 app:layout_constraintTop_toBottomOf="@+id/product_dtl">
 
                 <TextView
-                    android:id="@+id/offerdate"
+                    android:id="@+id/tvOfferDate"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
@@ -416,7 +416,7 @@
 
 
                 <TextView
-                    android:id="@+id/tvString_currentbid"
+                    android:id="@+id/tvStringCurrentbid"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="12dp"
@@ -428,12 +428,12 @@
                     android:textStyle="bold"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintLeft_toLeftOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/offerdate">
+                    app:layout_constraintTop_toBottomOf="@+id/tvOfferDate">
 
                 </TextView>
 
                 <TextView
-                    android:id="@+id/tv_price"
+                    android:id="@+id/etBidPrice"
                     android:layout_width="160dp"
                     android:layout_height="50dp"
                     android:layout_marginStart="12dp"
@@ -446,10 +446,10 @@
                     android:text="BTD:500.00"
                     android:textColor="#838383"
                     android:textStyle="bold"
-                    app:layout_constraintBottom_toTopOf="@+id/textView9"
+                    app:layout_constraintBottom_toTopOf="@+id/tvBidPrice"
                     app:layout_constraintEnd_toStartOf="@+id/priceviw"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tvString_currentbid">
+                    app:layout_constraintTop_toBottomOf="@+id/tvStringCurrentbid">
 
                 </TextView>
 
@@ -462,33 +462,33 @@
                     android:text="To win the bid please put in a bid price that is higher than current bid."
                     android:textColor="#838383"
                     android:textSize="12dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/tv_price"
+                    app:layout_constraintBottom_toBottomOf="@+id/etBidPrice"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toEndOf="@+id/tv_price"
-                    app:layout_constraintTop_toTopOf="@+id/tv_price"
+                    app:layout_constraintStart_toEndOf="@+id/etBidPrice"
+                    app:layout_constraintTop_toTopOf="@+id/etBidPrice"
                     app:layout_constraintVertical_bias="0.0"
                     tools:ignore="TextSizeCheck">
 
                 </TextView>
 
                 <TextView
-                    android:id="@+id/textView9"
+                    android:id="@+id/tvBidPrice"
                     android:layout_width="80dp"
                     android:layout_height="40dp"
                     android:layout_marginStart="12dp"
                     android:layout_marginTop="12dp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_price" />
+                    app:layout_constraintTop_toBottomOf="@+id/etBidPrice" />
 
                 <TextView
-                    android:id="@+id/textView10"
+                    android:id="@+id/tvBidPrice1"
                     android:layout_width="80dp"
                     android:layout_height="40dp"
                     android:layout_marginStart="16dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/textView9"
-                    app:layout_constraintStart_toEndOf="@+id/textView9"
-                    app:layout_constraintTop_toTopOf="@+id/textView9"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvBidPrice"
+                    app:layout_constraintStart_toEndOf="@+id/tvBidPrice"
+                    app:layout_constraintTop_toTopOf="@+id/tvBidPrice"
                     app:layout_constraintVertical_bias="0.0">
 
                 </TextView>
@@ -497,15 +497,15 @@
                     android:layout_width="80dp"
                     android:layout_height="40dp"
                     android:layout_marginStart="16dp"
-                    app:layout_constraintBottom_toBottomOf="@+id/textView10"
-                    app:layout_constraintStart_toEndOf="@+id/textView10"
-                    app:layout_constraintTop_toTopOf="@+id/textView10"
+                    app:layout_constraintBottom_toBottomOf="@+id/tvBidPrice1"
+                    app:layout_constraintStart_toEndOf="@+id/tvBidPrice1"
+                    app:layout_constraintTop_toTopOf="@+id/tvBidPrice1"
                     app:layout_constraintVertical_bias="0.0">
 
                 </TextView>
 
                 <TextView
-                    android:id="@+id/textView13"
+                    android:id="@+id/tvBidDetails"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="12dp"
@@ -513,7 +513,7 @@
                     android:text="Bid Details"
                     android:textSize="10sp"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView9">
+                    app:layout_constraintTop_toBottomOf="@+id/tvBidPrice">
 
                 </TextView>
 
@@ -521,9 +521,9 @@
                     android:layout_width="12dp"
                     android:layout_height="12dp"
                     android:src="@drawable/down"
-                    app:layout_constraintBottom_toBottomOf="@+id/textView13"
-                    app:layout_constraintStart_toEndOf="@+id/textView13"
-                    app:layout_constraintTop_toTopOf="@+id/textView13" />
+                    app:layout_constraintBottom_toBottomOf="@+id/tvBidDetails"
+                    app:layout_constraintStart_toEndOf="@+id/tvBidDetails"
+                    app:layout_constraintTop_toTopOf="@+id/tvBidDetails" />
 
                 <Button
                     android:layout_width="325dp"
@@ -536,7 +536,7 @@
                     android:text="Place Bid"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textView13" />
+                    app:layout_constraintTop_toBottomOf="@+id/tvBidDetails" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

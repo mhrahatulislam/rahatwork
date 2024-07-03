@@ -63,6 +63,7 @@ dependencies {
     implementation (libs.converter.gson)
     implementation (libs.androidx.lifecycle.extensions)
     implementation (libs.logging.interceptor)
+    implementation (libs.logging.interceptor.v493)
 
     //glad
     implementation (libs.glide)
